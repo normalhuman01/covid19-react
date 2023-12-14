@@ -3,14 +3,14 @@ import PropTypes from 'prop-types'
 import { Grid, Skeleton } from '../../../components'
 import Card from './Card'
 
-function Board({ data }) { // Cards sobre o Covid-19 irão ficar aqui
+function Board({ data }) { // Las tarjetas sobre el Covid-19 se quedarán aquí
     
     // Dados que a API retorna
     const { cases, todayCases, active, deaths, todayDeaths, recovered, critical } = data 
 
 /* 
- * Função para retornar o valor ou uma barra cinza.
- * Skeleton - Melhora a interface de loading.
+* Función para devolver el valor o una barra gris.
+  * Esqueleto: mejora la interfaz de carga.
  */
     const getValue = (value) => value ? value : <Skeleton variant="text" width={182} height={60} />
 
@@ -22,19 +22,19 @@ function Board({ data }) { // Cards sobre o Covid-19 irão ficar aqui
             </Grid>
 
             <Grid item xs={12} md={4}>
-                <Card value={getValue(todayCases)} label="HOJE" color="#000" />
+                <Card value={getValue(todayCases)} label="HOY" color="#000" />
             </Grid>
 
             <Grid item xs={12} md={4}>
-                <Card value={getValue(active)} label="ATIVO" color="#000" />
+                <Card value={getValue(active)} label="ACTIVOS" color="#000" />
             </Grid>
             
             <Grid item xs={12} md={6}>
-                <Card value={getValue(deaths)} label="ÓBITOS" color="#FF0000" />
+                <Card value={getValue(deaths)} label="FALLECIDOS" color="#FF0000" />
             </Grid>
 
             <Grid item xs={12} md={6}>
-                <Card value={getValue(todayDeaths)} label="HOJE" color="#FF0000" />
+                <Card value={getValue(todayDeaths)} label="HOY" color="#FF0000" />
             </Grid>
 
             <Grid item xs={12} md={6}>
@@ -42,7 +42,7 @@ function Board({ data }) { // Cards sobre o Covid-19 irão ficar aqui
             </Grid>
 
             <Grid item xs={12} md={6}>
-                <Card value={getValue(critical)} label="CRÍTICO" color="#FF7F00" />
+                <Card value={getValue(critical)} label="CRÍTICOS" color="#FF7F00" />
             </Grid>
         </Grid>
     )

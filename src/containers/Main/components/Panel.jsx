@@ -14,14 +14,13 @@ function Panel({ updateAt, onChange, data, country, getCovidData }) {
         <MenuItem key={`country-${index}`} value={country.value}>
             <ItemStyled>
                 <div>{country.label}</div>
-                <img src={country.flag} alt={`País-${country.label}`} />
+                <img src={country.flag} alt={`Country-${country.label}`} />
             </ItemStyled>
         </MenuItem>
     )
 
-    const textCovid19 = `País: ${country}, Total de Casos: ${cases}, Óbitos de Hoje: ${todayDeaths}, 
-    Casos de Hoje: ${todayCases}, Total de Mortes: ${deaths}, Recuperados: ${recovered}.`
-    
+    const textCovid19 = `Country: ${country}, Total Cases: ${cases}, Today's Deaths: ${todayDeaths}, 
+    Today's Cases: ${todayCases}, Total Deaths: ${deaths}, Recovered: ${recovered}.`    
     // Documentações mais completas de JS é na Mozilla
     const copyInfo = () => {
         navigator.clipboard.writeText(textCovid19)
@@ -33,9 +32,9 @@ function Panel({ updateAt, onChange, data, country, getCovidData }) {
      */
     const shareInfo = () => {
         navigator.share({
-            title: `Dados do Covid-19 - ${country}`,
+            title: `Covid-19 data- ${country}`,
             text: textCovid19,
-            url: 'https://covid19-pwa.netlify.app/' // Onde a aplicação está hospedada.
+            url: '/' // Onde a aplicação está hospedada.
         })
     }
 
@@ -43,7 +42,7 @@ function Panel({ updateAt, onChange, data, country, getCovidData }) {
     const renderShareButton = (
         <div>
             <Button variant="contained" color="primary" onClick={shareInfo}>
-                Compartilhar
+                To share
             </Button>
         </div>
     )
@@ -51,7 +50,7 @@ function Panel({ updateAt, onChange, data, country, getCovidData }) {
     const renderCopyButton = (
         <div>
         <Button variant="contained" color="primary" onClick={copyInfo}>
-            Copiar
+            Copy
         </Button>
     </div>
     )
@@ -60,10 +59,10 @@ function Panel({ updateAt, onChange, data, country, getCovidData }) {
         <Card>
             <CardPanelContentStyled>
                 <div>
-                    <Typography variant="h5" component="span" color="primary">Coronavírus (COVID-19) </Typography>
-                    <Typography variant="h6" component="span" color="primary">Visão Geral </Typography>
-                    <Typography variant="body2" component="span" color="primary">Atualizado em: {updateAt}</Typography>
-                    <div className="pt-2">
+                <Typography variant="h5" component="span" color="primary">Coronavirus (COVID-19) </Typography>
+                     <Typography variant="h6" component="span" color="primary">Overview </Typography>
+                     <Typography variant="body2" component="span" color="primary">Updated on: {updateAt}</Typography>
+                     <div className="pt-2">
                         <Select onChange={onChange} value={country}>
                             {COUNTRIES.map(renderCountries)}
                         </Select>
