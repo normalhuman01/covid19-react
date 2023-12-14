@@ -42,7 +42,7 @@
     />
   </a>
   <br />
-  <i>Progressive Web Application com React para mapear os dados do COVID-19 pelo mundo.</i>
+  <i>Progressive Web Application with React to map COVID-19 data around the world.</i>
 </p>
 
 <hr />
@@ -64,7 +64,7 @@
 
 <details>
   
-  <summary><strong>Dependências</strong></summary>
+  <summary><strong>Dependences</strong></summary>
   
   <br />
 
@@ -80,13 +80,13 @@
 
 <details>
   
-  <summary><strong>Anotações</strong></summary>
+  <summary><strong>Notes</strong></summary>
   
   <br />
   
   <p align="left">
-    Skeleton - Melhora a interface de loading. <br />
-    useState - Manipula variáveis. <br />
+    Skeleton - Improves the loading interface. <br />
+    useState - Manipulates variables. <br />
   </p>
   
 </details>
