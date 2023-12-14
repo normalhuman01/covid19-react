@@ -35,12 +35,6 @@
 </p>
 
 <p align="center">
-  <a href="https://covid19-pwa.netlify.app/">
-    <img
-      src="https://github.com/lucasrmagalhaes/covid19-react/blob/main/public/dio.gif?raw=true"
-      alt="COVID-19 PWA" 
-    />
-  </a>
   <br />
   <i>Progressive Web Application with React to map COVID-19 data around the world.</i>
 </p>
